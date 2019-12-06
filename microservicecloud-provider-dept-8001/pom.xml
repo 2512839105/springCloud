@@ -49,8 +49,6 @@
 		<dependency>
 			<groupId>org.yaml</groupId>
 			<artifactId>snakeyaml</artifactId>
-			<version>1.10</version>
-
 		</dependency>
 		<!--修改后立即生效 热部署 -->
 

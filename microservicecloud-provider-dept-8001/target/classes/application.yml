@@ -1,6 +1,5 @@
 server:
-   port:8001
-
+    port: 8081
 mybatis:   
    #config-location: classPath:mybatis/mybatis.cfg.xml   #mybatis配置文件所在路径
    type-aliases-package: com.liubin.springcloud.entities  #所有Entity 别名类所在包
