@@ -1,4 +1,5 @@
 server:
+   port: 8001
 mybatis:   
    #config-location: classPath:mybatis/mybatis.cfg.xml   #mybatis配置文件所在路径
    type-aliases-package: com.liubin.springcloud.entities  #所有Entity 别名类所在包
@@ -7,7 +8,7 @@ mybatis:
    
 spring:
    application:
-    name: microservicecloud-dept
+    name: microservicecloud-dept                       #注册的微服务名称
    datasource: 
     type: com.alibaba.druid.pool.DruidDataSource       #当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver          #mysql驱动包
@@ -19,6 +20,22 @@ spring:
       initial-size: 5                                  #初始化连接数
       max-total: 5
       max-wait-millis: 200
-   
-   
+#标注8001将入住到eure ka上
+eureka:
+  client:  #客户端注册进eureka服务列表内
+    service-url:
+      #单机配置defaultZone: http://localhost:7001/eureka
+      #集群配置
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance: 
+      instance-id: microservicecloud-dept8001  #自定义微服务名称
+      prefer-ip-address: true #访问路径可以显示IP地址
+
+info: #配置在eureka中的info信息
+  app.name: liubin-microservicecloud
+  company.name: www.cctv.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+  
+  
   
