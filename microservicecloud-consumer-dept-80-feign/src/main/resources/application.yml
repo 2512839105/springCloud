@@ -1,6 +1,11 @@
 server:
-   port: 80
+   port: 8088
 
+#hyStrix 添加内容
+feign:
+  hystrix:
+    enabled: true
+ 
    
 #ribbon 增加eureka配置  
 eureka:

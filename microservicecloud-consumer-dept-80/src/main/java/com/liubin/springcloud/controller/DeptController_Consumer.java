@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.liubin.springcloud.entities.Dept;
 
 @RestController
-public class DeptController_Consumer {
+public class DeptController_Consumer {//消费者
 	
 	//private static final String REST_URL_PREFIX="http://localhost:8001";
 	private static final String REST_URL_PREFIX="http://MICROSERVICECLOUD-DEPT";//微服务的名称 取自7001 eureka
